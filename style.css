@@ -1,0 +1,48 @@
+.board {
+    width: fit-content;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    border: 1px solid black;
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+}
+
+
+
+.board :nth-child(even).bar .square:nth-child(even){
+    background-color: black;
+}
+
+.board :nth-child(odd).bar .square:nth-child(odd){
+    background-color: black;
+}
+
+.board :nth-child(odd).bar .square:nth-child(odd).clicked,
+.board :nth-child(even).bar .square:nth-child(even).clicked
+{
+    background-color: grey;
+}
+.board :nth-child(odd).bar .square:nth-child(odd).path,
+.board :nth-child(even).bar .square:nth-child(even).path{
+    background-color: rgb(4, 80, 0);
+}
+
+
+svg{
+    position: relative;
+    top: -50px;
+    width:50px;
+    height: 50px;
+}
+
+.clicked
+{
+    background-color: grey;
+}
+
+.path{
+    background-color: rgb(4, 120, 0);
+}
